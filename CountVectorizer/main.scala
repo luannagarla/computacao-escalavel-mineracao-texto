@@ -1,4 +1,4 @@
-/ *
+/*
 INÍCIO
 
     // 1. Ler a base de dados
