@@ -1,0 +1,28 @@
+# sbt / Scala
+target/
+project/target/
+project/project/
+.bsp/
+.bloop/
+.metals/
+.scala-build/
+.idea/
+*.iml
+*.class
+
+# Dados e resultados (grandes demais para o git)
+data/*
+!data/README.md
+results/*
+!results/.gitkeep
+scripts/output/
+
+# Logs e arquivos locais
+*.log
+.DS_Store
+
+# Estado de ferramentas de agente
+.omo/
+
+# Enunciado da disciplina (material do professor)
+Instrucoes*
