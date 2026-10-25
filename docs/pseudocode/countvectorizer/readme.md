@@ -7,16 +7,16 @@ Computadores não trabalham diretamente com palavras da mesma maneira que trabal
 
 # Organização do projeto
 
-- Main: Execução principal 
-- CountVectorizer: Implementação da contagem de palavras de fato
-- Arquivo build: Dependências
+- `runner/.../BenchmarkApp.scala`: execução principal e medição de tempo
+- `countvectorizer/.../CountVectorizerAlgorithm.scala`: implementação da contagem de palavras
+- `shared/`: contrato comum, leitura do CSV e criação da `SparkSession`
+- `build.sbt`: dependências e versões
 
 ---
-# O que precisa estar instalado (eu acho)
-* Java JDK 21	
-* Apache Spark 4.0.4	
-* Scala 
-* SBT	
+# Ambiente
+
+As versões e o passo a passo de instalação estão no `README.md` da raiz do
+repositório (JDK 21, Scala 2.13.18, Spark 4.1.2 e sbt 1.11.7).
 
 ---
 # Planejamento
@@ -37,7 +37,7 @@ Conferir se o vocabulário e os vetores gerados estão corretos usando textos pe
 Comparar tempo de execução, quantidade de documentos processados por segundo e comportamento com diferentes quantidades de partições.
 
 ### Experimentos planejados
-Base pequena: AVvliar o tempo inicial 
+Base pequena: Avaliar o tempo inicial 
 Base média:	Crescimento do tempo em comparação com inicial
 Base completa: Desempenho no conjunto real
 Diferentes partições: Efeito do paralelismo
