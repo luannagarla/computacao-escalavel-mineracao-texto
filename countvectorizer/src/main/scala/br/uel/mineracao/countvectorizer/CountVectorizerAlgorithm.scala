@@ -8,7 +8,7 @@ import org.apache.spark.rdd.RDD
  *
  * Tokeniza os documentos, constrói um vocabulário global
  * e transforma cada documento em um vetor esparso de contagens */
-final class CountVectorizerAlgorithm extends TextMiningAlgorithm {
+final class CountVectorizerAlgorithm extends TextMiningAlgorithm with Serializable {
 
   override val name: String = "CountVectorizer"
 
