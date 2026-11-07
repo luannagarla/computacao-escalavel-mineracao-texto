@@ -21,6 +21,16 @@ final class CountVectorizerAlgorithm extends TextMiningAlgorithm with Serializab
       .toSeq
   }
 
+  def countGlobalVocabulary(documents: RDD[(Long, String)]): RDD[(String, Long)] = {
+  documents
+    .flatMap {
+      case (_, text) =>
+        tokenize(text)
+    }
+    .map(token => (token, 1L))
+    .reduceByKey(_ + _)
+  }
+
   override def fitTransform(
                              documents: RDD[(Long, String)]
                            ): VectorizationResult = {
@@ -59,7 +69,7 @@ final class CountVectorizerAlgorithm extends TextMiningAlgorithm with Serializab
             (broadcastIndex.value(token), count.toDouble)
           )
       }
-
+   
     val vectors = indexedCounts
       .groupByKey()
       .mapValues { entries =>
