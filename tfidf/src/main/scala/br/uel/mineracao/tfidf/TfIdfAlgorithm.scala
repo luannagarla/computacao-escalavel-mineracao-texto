@@ -1,7 +1,7 @@
-package br.uel.mineracao.tfidf
+package br.uel.escalavel.tfidf
 
-import br.uel.mineracao.TextMiningAlgorithm
-import br.uel.mineracao.model.VectorizationResult
+import br.uel.escalavel.TextMiningAlgorithm
+import br.uel.escalavel.model.VectorizationResult
 import org.apache.spark.rdd.RDD
 
 /**
@@ -15,7 +15,7 @@ import org.apache.spark.rdd.RDD
  *  - calcular a frequência do termo e o inverso da frequência nos documentos
  *    usando transformações/actions de RDD;
  *  - construir um único vocabulário para o corpus;
- *  - devolver um [[br.uel.mineracao.model.SparseVector]] por documento,
+ *  - devolver um [[br.uel.escalavel.model.SparseVector]] por documento,
  *    com os índices do vocabulário e os pesos como `Double`.
  */
 final class TfIdfAlgorithm extends TextMiningAlgorithm {

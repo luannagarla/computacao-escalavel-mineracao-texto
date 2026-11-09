@@ -1,10 +1,10 @@
-package br.uel.mineracao.countvectorizer
+package br.uel.escalavel.countvectorizer
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.funsuite.AnyFunSuite
 
-// para executar os testes, rode no terminal o trecho -> sbt "testOnly br.uel.mineracao.countvectorizer.CountVectorizerAlgorithmSpec"
+// para executar os testes, rode no terminal o trecho -> sbt "testOnly br.uel.escalavel.countvectorizer.CountVectorizerAlgorithmSpec"
 
 class CountVectorizerAlgorithmSpec extends AnyFunSuite with BeforeAndAfterAll {
 

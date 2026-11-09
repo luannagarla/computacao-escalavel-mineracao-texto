@@ -1,7 +1,7 @@
-package br.uel.mineracao.countvectorizer
+package br.uel.escalavel.countvectorizer
 
-import br.uel.mineracao.TextMiningAlgorithm
-import br.uel.mineracao.model.{Vocabulary, SparseVector, VectorizationResult}
+import br.uel.escalavel.TextMiningAlgorithm
+import br.uel.escalavel.model.{Vocabulary, SparseVector, VectorizationResult}
 import org.apache.spark.rdd.RDD
 
 /** Implementação do CountVectorizer sobre RDDs

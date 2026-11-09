@@ -1,6 +1,6 @@
-package br.uel.mineracao
+package br.uel.escalavel
 
-import br.uel.mineracao.model.VectorizationResult
+import br.uel.escalavel.model.VectorizationResult
 import org.apache.spark.rdd.RDD
 
 /**

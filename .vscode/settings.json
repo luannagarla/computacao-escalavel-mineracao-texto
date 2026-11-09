@@ -2,7 +2,6 @@
     "files.watcherExclude": {
         "**/target/**": true,
         "**/.bloop/**": true,
-        "**/.metals/**": true,
         "**/.bsp/**": true
     }
 }

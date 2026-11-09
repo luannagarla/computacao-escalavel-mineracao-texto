@@ -1,4 +1,4 @@
-package br.uel.mineracao.runner
+package br.uel.escalavel.runner
 
 /**
  * Ponto de entrada único dos experimentos.
@@ -9,9 +9,9 @@ package br.uel.mineracao.runner
  * Fluxo esperado:
  *  1. Ler os argumentos: algoritmo (`countvectorizer` ou `tfidf`), caminho do
  *     CSV, `master` do Spark e, opcionalmente, arquivo de saída.
- *  2. Criar a `SparkSession` com [[br.uel.mineracao.spark.SparkSessionFactory]]
+ *  2. Criar a `SparkSession` com [[br.uel.escalavel.spark.SparkSessionFactory]]
  *     ANTES de qualquer medição.
- *  3. Ler os documentos com [[br.uel.mineracao.io.CsvDocumentReader]] e
+ *  3. Ler os documentos com [[br.uel.escalavel.io.CsvDocumentReader]] e
  *     materializar a entrada (`cache()` + `count()`) antes do cronômetro.
  *  4. Iniciar o cronômetro, chamar `fitTransform` e forçar uma ação sobre os
  *     vetores (por exemplo, `count()`), pois RDDs são preguiçosos.

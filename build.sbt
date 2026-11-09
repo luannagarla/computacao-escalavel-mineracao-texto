@@ -83,7 +83,7 @@ lazy val runner = (project in file("runner"))
   .settings(commonSettings)
   .settings(
     name := "runner",
-    Compile / mainClass := Some("br.uel.mineracao.runner.BenchmarkApp")
+    Compile / mainClass := Some("br.uel.escalavel.runner.BenchmarkApp")
   )
 
 lazy val root = (project in file("."))

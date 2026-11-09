@@ -1,4 +1,4 @@
-package br.uel.mineracao.io
+package br.uel.escalavel.io
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{DataFrame, SparkSession}

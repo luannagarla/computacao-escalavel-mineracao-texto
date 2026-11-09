@@ -1,4 +1,4 @@
-package br.uel.mineracao.spark
+package br.uel.escalavel.spark
 
 import org.apache.spark.sql.SparkSession
 

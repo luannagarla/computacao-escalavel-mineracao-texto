@@ -1,4 +1,4 @@
-package br.uel.mineracao.model
+package br.uel.escalavel.model
 
 /**
  * Vetor esparso de um documento.

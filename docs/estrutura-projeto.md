@@ -275,7 +275,7 @@ mudar, **mude uma vez e use o mesmo valor para os dois algoritmos**.
 ### 5.4 Logs
 
 `shared/src/main/resources/log4j2.properties` deixa o Spark em `WARN` e o
-código do projeto (`br.uel.mineracao`) em `INFO`. Isso evita que os logs de
+código do projeto (`br.uel.escalavel`) em `INFO`. Isso evita que os logs de
 INFO do Spark poluam a saída dos experimentos sem esconder mensagens do grupo.
 
 ### 5.5 Formatação
@@ -346,7 +346,7 @@ O runner é o **único ponto de entrada** dos experimentos. Ele deve:
 O `build.sbt` já define:
 
 ```scala
-Compile / mainClass := Some("br.uel.mineracao.runner.BenchmarkApp")
+Compile / mainClass := Some("br.uel.escalavel.runner.BenchmarkApp")
 ```
 
 portanto, depois de implementado, o comando será algo como:
@@ -386,10 +386,10 @@ escalabilidade, mas **nenhum script foi escrito neste scaffolding**.
 
 ## 9. Convenções do projeto
 
-- **Pacotes em minúsculas**, prefixados por `br.uel.mineracao`.
+- **Pacotes em minúsculas**, prefixados por `br.uel.escalavel`.
 - **Um módulo por algoritmo**, com a classe principal em:
-  - `br.uel.mineracao.countvectorizer.CountVectorizerAlgorithm`
-  - `br.uel.mineracao.tfidf.TfIdfAlgorithm`
+  - `br.uel.escalavel.countvectorizer.CountVectorizerAlgorithm`
+  - `br.uel.escalavel.tfidf.TfIdfAlgorithm`
 - **Testes** em `src/test/scala`, no mesmo pacote do código testado. A
   dependência do ScalaTest já está configurada; recomenda-se `AnyFunSuite`.
 - **Comentários e documentação em português**, acompanhando o enunciado.
